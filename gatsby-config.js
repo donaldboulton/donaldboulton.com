@@ -21,6 +21,7 @@ module.exports = {
     },
   },
   plugins: [
+    `gatsby-plugin-netlify`,
     {
       resolve: 'gatsby-plugin-react-leaflet',
       options: {
@@ -216,9 +217,73 @@ module.exports = {
         ],
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // "gatsby-plugin-offline",
-    'gatsby-plugin-gatsby-cloud',
+    {
+      resolve: `gatsby-plugin-gdpr-cookies`,
+      options: {
+        googleAnalytics: {
+          trackingId: 'UA-213728425-1', // leave empty if you want to disable the tracker
+          cookieName: 'gatsby-gdpr-google-analytics', // default
+          anonymize: true, // default
+          allowAdFeatures: false // default
+        },
+        googleTagManager: {
+          trackingId: 'G-09Q3PSV062', // leave empty if you want to disable the tracker
+          cookieName: 'gatsby-gdpr-google-tagmanager', // default
+          dataLayerName: 'dataLayer', // default
+        },
+        facebookPixel: {
+          pixelId: 'YOUR_FACEBOOK_PIXEL_ID', // leave empty if you want to disable the tracker
+          cookieName: 'gatsby-gdpr-facebook-pixel', // default
+        },
+        tikTokPixel: {
+          pixelId: 'YOUR_TIKTOK_PIXEL_ID', // leave empty if you want to disable the tracker
+          cookieName: 'gatsby-gdpr-tiktok-pixel', // default
+        },
+        hotjar: {
+          hjid: '2721625',
+          hjsv: '6',
+          cookieName: 'gatsby-gdpr-hotjar', // default
+        },
+        // defines the environments where the tracking should be available  - default is ["production"]
+        environments: ['production', 'development']
+      },
+    },
+    {
+      resolve: `gatsby-plugin-gatsby-cloud`,
+      options: {
+        headers: {
+          "/*": [
+            "Cache-Control: public, max-age=31536000, immutable",
+          ],
+          "/static/*": [
+            "Cache-Control: public, max-age=31536000, immutable",
+          ],
+        }, // option to add more headers. `Link` headers are transformed by the below criteria
+        allPageHeaders: [
+          "Strict-Transport-Security: max-age=31536000; preload",
+          "X-Robots-Tag: index",
+          "X-Frame-Options: DENY",
+          "X-XSS-Protection: 1; mode=block",
+          "X-Content-Type-Options: nosniff",
+          "Referrer-Policy: same-origin",
+          "Access-Control-Allow-Origin: https://gatsbystarterbasicinstructions.gatsbyjs.io/, https://utteranc.es/client.js",
+          "Access-Control-Allow-Methods: POST; GET; PUT; DELETE; HEAD",
+        ], // option to add headers for all pages. `Link` headers are transformed by the below criteria
+        mergeSecurityHeaders: true, // boolean to turn off the default security headers
+        mergeLinkHeaders: true, // boolean to turn off the default gatsby js headers
+        mergeCachingHeaders: true, // boolean to turn off the default caching headers
+        transformHeaders: (headers, path) => headers, // optional transform for manipulating headers under each path (e.g.sorting), etc.
+        generateMatchPathRewrites: true, // boolean to turn off automatic creation of redirect rules for client only paths
+      },
+    },
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/`, `about`, `/contact`, `/post/*`],
+        workboxConfig: {
+          importWorkboxFrom: `cdn`,
+        },
+      },
+    },
   ],
 }

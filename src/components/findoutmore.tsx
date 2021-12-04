@@ -30,10 +30,10 @@ const callouts = [
 
 export default function FindOutMore() {
   return (
-    <div className="bg-purple-100">
+    <div className="bg-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto py-16 sm:py-24 lg:py-32 lg:max-w-none">
-          <h2 className="text-4xl font-extrabold text-purple-800">Find Out More</h2>
+          <h2 className="text-4xl font-extrabold text-gray-800">Find Out More</h2>
 
           <div className="mt-6 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-6">
             {callouts.map(callout => (
@@ -45,7 +45,7 @@ export default function FindOutMore() {
                     className="w-full h-full object-center object-contain"
                   />
                 </div>
-                <h3 className="mt-6 text-2xl text-purple-500">
+                <h3 className="mt-6 text-2xl text-gray-500">
                   <a href={callout.href}>
                     <span className="absolute inset-0" />
                     {callout.name}

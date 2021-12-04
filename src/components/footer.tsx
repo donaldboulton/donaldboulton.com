@@ -24,29 +24,29 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="text-gray-600">
-      <div className="container fixed bottom-0 inset-x-0 bg-gray-100 px-4 py-4 mx-auto flex items-center md:flex-row flex-col">
-        <Link className="flex title-font font-medium items-center lg:justify-start justify-center text-gray-900" to="/">
+    <footer className="text-gray-200">
+      <div className="container fixed bottom-0 inset-x-0 bg-gray-800 px-4 py-4 mx-auto flex items-center md:flex-row flex-col">
+        <Link className="flex title-font font-medium items-center lg:justify-start justify-center text-gray-300" to="/">
           <img src={Logo} alt="Footer Logo" width="150" />
           <span className="sr-only">Logo</span>
         </Link>
-        <p className="text-sm text-gray-600 md:ml-4 md:pl-4 md:border-l-2 md:border-purple-300 md:py-2 md:mt-0 mt-4">
+        <p className="text-sm text-gray-200 md:ml-4 md:pl-4 md:border-l-2 md:border-gray-500 md:py-2 md:mt-0 mt-4">
           © {new Date().getFullYear()} 0BSD licence
           <A href="https://hellotham.com" className="ml-1" external>
-            Hello Tham Pty Ltd
+            PubliusLogic.com
           </A>
         </p>
-        <p className="text-sm text-gray-600 md:ml-4 md:pl-4 md:border-l-2 md:border-purple-300 md:py-2 md:mt-0 mt-4">
+        <p className="text-sm text-gray-200 md:ml-4 md:pl-4 md:border-l-2 md:border-gray-500 md:py-2 md:mt-0 mt-4">
           <A href="/privacy" className="ml-1">
             Privacy Policy
           </A>
         </p>
-        <p className="text-sm text-gray-600 md:ml-4 md:pl-4 md:border-l-2 md:border-purple-300 md:py-2 md:mt-0 mt-4">
+        <p className="text-sm text-gray-200 md:ml-4 md:pl-4 md:border-l-2 md:border-gray-500 md:py-2 md:mt-0 mt-4">
           <A href="/rss.xml" className="ml-1" external>
             RSS
           </A>
         </p>
-        <p className="text-sm text-gray-600 md:ml-4 md:pl-4 md:border-l-2 md:border-purple-300 md:py-2 md:mt-0 mt-4">
+        <p className="text-sm text-gray-200 md:ml-4 md:pl-4 md:border-l-2 md:border-gray-500 md:py-2 md:mt-0 mt-4">
           <A href="/sitemap/sitemap-index.xml" className="ml-1" external>
             Sitemap
           </A>

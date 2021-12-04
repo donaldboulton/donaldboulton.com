@@ -86,7 +86,7 @@ export default function ContactUs() {
 
         <Map lat={-33.86785} lng={151.20732} />
 
-        <div className="mt-10 sm:mt-0 p-8 bg-purple-100">
+        <div className="mt-10 sm:mt-0 p-8 bg-gray-100">
           <div className="lg:grid lg:grid-cols-3 lg:gap-6">
             <div className="lg:col-span-1">
               <div className="px-4 sm:px-0">
@@ -95,7 +95,7 @@ export default function ContactUs() {
                     <p key={method.name} className="mt-2 flex items-center text-sm text-gray-500">
                       <method.image className=" h-5 w-5" />
                       <span>&nbsp;{method.name}:&nbsp;</span>
-                      <a href={method.link} className="text-purple-600 hover:text-pink-600">
+                      <a href={method.link} className="text-gray-600 hover:text-rose-600">
                         {method.link}
                       </a>
                     </p>
@@ -119,7 +119,7 @@ export default function ContactUs() {
                           type="text"
                           id="name"
                           autoComplete="off"
-                          className="mt-1 focus:ring-purple-500 focus:border-purple-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                          className="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                           {...register('name', { required: true, maxLength: 256 })}
                         />
                       </div>
@@ -132,7 +132,7 @@ export default function ContactUs() {
                           type="email"
                           id="email"
                           autoComplete="off"
-                          className="mt-1 focus:ring-purple-500 focus:border-purple-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                          className="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                           {...register('email', { required: true, pattern: /^\S+@\S+$/i })}
                         />
                       </div>
@@ -146,7 +146,7 @@ export default function ContactUs() {
                           multiple
                           id="phone"
                           autoComplete="off"
-                          className="mt-1 focus:ring-purple-500 focus:border-purple-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                          className="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                           {...register('phone', {
                             required: true,
                             minLength: 6,
@@ -163,7 +163,7 @@ export default function ContactUs() {
                           type="text"
                           id="subject"
                           autoComplete="on"
-                          className="mt-1 focus:ring-purple-500 focus:border-purple-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                          className="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                           {...register('subject', { required: true, maxLength: 256 })}
                         />
                       </div>
@@ -173,7 +173,7 @@ export default function ContactUs() {
                           Message
                         </label>
                         <textarea
-                          className="form-textarea mt-1 block w-full h-32 focus:ring-purple-500 focus:border-purple-500 shadow-sm sm:text-sm border-gray-300 rounded-md"
+                          className="form-textarea mt-1 block w-full h-32 focus:ring-gray-500 focus:border-gray-500 shadow-sm sm:text-sm border-gray-300 rounded-md"
                           rows={5}
                           id="text"
                           placeholder="Enter your message here."
@@ -186,7 +186,7 @@ export default function ContactUs() {
                   <div className="px-4 py-3 bg-gray-50 text-right sm:px-6">
                     <button
                       type="submit"
-                      className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
+                      className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white light:text-black bg-gray-600 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
                     >
                       Send
                     </button>
@@ -244,7 +244,7 @@ export default function ContactUs() {
                 <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
                   <button
                     type="button"
-                    className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-green-600 text-base font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 sm:ml-3 sm:w-auto sm:text-sm"
+                    className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-green-600 text-base font-medium text-white light:text-black hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 sm:ml-3 sm:w-auto sm:text-sm"
                     onClick={() => setOpen(false)}
                   >
                     OK

@@ -40,7 +40,7 @@ This website is open source (0BSD licence) - fork it and customise for your need
 ## How to use the starter
 
 1. Clone your own version of the starter template or fork the repository. Run `yarn` then `yarn build` or `yarn develop`.
-2. The default colour scheme is purple to match the Gatsby logo. Change to your preferred hue by doing a global search and replace of '-purple-' to your favourite colour.
+2. The default colour scheme is purple to match the Gatsby logo. Change to your preferred hue by doing a global search and replace of '-gray-' to your favourite colour.
 3. The home (landing) page consists of a number of components (Hero, Feature, CTA, ...) - edit these components in `src/components` to customise.
 4. The `/contact` page displays an OpenStreetMaps map via Leaflet - customise by changing to your preferred set of coordinates.
 5. `gatsby-config.js` has all the site parameters - edit site metadata to suit.

@@ -29,7 +29,7 @@ const BlogRoll = ({ tag }: BlogRollProps) => {
     <div className="mt-6 flex flex-col items-center">
       {posts.length > POSTS_PER_PAGE ? (
         <ReactPaginate
-          previousLinkClassName="relative inline-flex items-center px-2 py-2 rounded-l-md border border-pink-200 bg-white text-sm font-medium text-gray-900 hover:bg-pink-200"
+          previousLinkClassName="relative inline-flex items-center px-2 py-2 rounded-l-md border border-rose-200 bg-white text-sm font-medium text-gray-900 hover:bg-rose-200"
           previousLabel={
             <>
               <span className="sr-only">Previous</span>
@@ -48,7 +48,7 @@ const BlogRoll = ({ tag }: BlogRollProps) => {
               </svg>
             </>
           }
-          nextLinkClassName="relative inline-flex items-center px-2 py-2 rounded-r-md border border-pink-200 bg-white text-sm font-medium text-gray-900 hover:bg-pink-200"
+          nextLinkClassName="relative inline-flex items-center px-2 py-2 rounded-r-md border border-rose-200 bg-white text-sm font-medium text-gray-900 hover:bg-rose-200"
           nextLabel={
             <>
               <span className="sr-only">Next</span>
@@ -67,15 +67,15 @@ const BlogRoll = ({ tag }: BlogRollProps) => {
               </svg>
             </>
           }
-          pageLinkClassName="relative inline-flex items-center px-4 py-2 border border-pink-200 bg-white text-sm font-medium text-gray-900 hover:bg-pink-200"
+          pageLinkClassName="relative inline-flex items-center px-4 py-2 border border-rose-200 bg-white text-sm font-medium text-gray-900 hover:bg-rose-200"
           breakLabel={'...'}
-          breakLinkClassName="relative inline-flex items-center px-4 py-2 border border-pink-200 bg-gray-100 text-sm font-medium text-gray"
+          breakLinkClassName="relative inline-flex items-center px-4 py-2 border border-rose-200 bg-gray-100 text-sm font-medium text-gray"
           pageCount={Math.ceil(posts.length / POSTS_PER_PAGE)}
           marginPagesDisplayed={2}
           pageRangeDisplayed={3}
           onPageChange={handlePageClick}
           containerClassName="relative z-0 inline-flex shadow-sm -space-x-px"
-          activeLinkClassName="relative inline-flex items-center px-4 py-2 border border-purple-200 bg-purple-200 text-sm font-medium text-rosely0 hover:bg-pink-200"
+          activeLinkClassName="relative inline-flex items-center px-4 py-2 border border-gray-200 bg-gray-200 text-sm font-medium text-rosely0 hover:bg-rose-200"
         />
       ) : (
         ''
@@ -96,12 +96,12 @@ const BlogRoll = ({ tag }: BlogRollProps) => {
               <div className="p-6">
                 {post.frontmatter.tags ? <Tags tags={post.frontmatter.tags} /> : ''}
                 <Link to={`/${post.slug}`}>
-                  <h1 className="title-font text-xl font-bold text-purple-600 hover:text-pink-600 mt-2">
+                  <h1 className="title-font text-xl font-bold text-gray-600 hover:text-rose-600 mt-2">
                     {post.frontmatter.title}
                   </h1>
                 </Link>
                 <div className="flex items-center flex-wrap ">
-                  <span className="text-gray-500 mr-3 inline-flex items-center leading-none text-xs pr-3 py-1 border-r-2 border-pink-200">
+                  <span className="text-gray-500 mr-3 inline-flex items-center leading-none text-xs pr-3 py-1 border-r-2 border-rose-200">
                     <CalendarIcon className="w-4 h-4 mr-1" />
                     {post.frontmatter.date}
                   </span>

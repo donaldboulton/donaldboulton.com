@@ -18,7 +18,7 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <>
       <Header />
-      <div className="max-w-screen-xl mx-auto">
+      <div className="max-w-screen-xl mx-auto bg-primary-dark light:bg-offwhite transition-all duration-200 ease-linear antialiased font-sans">
         <main>{children}</main>
       </div>
       <Footer />

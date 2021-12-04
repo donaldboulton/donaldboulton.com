@@ -15,7 +15,7 @@ interface PostHeroProps {
 }
 
 const PostHero = ({ url, title, description, author, date, image, tags }: PostHeroProps) => (
-  <div className="mb-4 md:mb-0 w-full max-w-screen-xl mx-auto relative h-96">
+  <div className="mb-4 md:mb-0 w-full max-w-screen-xl mx-auto relative h-96 text-white light:text-black">
     <div className="absolute left-0 bottom-0 w-full h-full z-10 bg-gradient-to-t from-gray-700"></div>
     <Img
       image={image}
@@ -25,8 +25,8 @@ const PostHero = ({ url, title, description, author, date, image, tags }: PostHe
     />
     <div className="p-4 absolute bottom-0 left-0 z-20">
       {tags ? <Tags tags={tags} /> : ''}
-      <h2 className="text-4xl font-bold text-white leading-tight">{title}</h2>
-      <h2 className="text-xl font-medium italic text-purple-200">{description}</h2>
+      <h2 className="text-4xl font-bold text-white light:text-black leading-tight">{title}</h2>
+      <h2 className="text-xl font-medium italic text-primary-light">{description}</h2>
       {author ? (
         <div className="flex mt-3">
           <StaticImage
@@ -37,14 +37,14 @@ const PostHero = ({ url, title, description, author, date, image, tags }: PostHe
             className="h-10 w-10 rounded-full mr-2 object-cover"
           />
           <div>
-            <p className="font-semibold text-purple-200 text-sm">{author}</p>
-            <p className="font-semibold text-purple-400 text-xs">{date?.slice(0, 10)}</p>
+            <p className="font-semibold text-gray-200 text-sm">{author}</p>
+            <p className="font-semibold text-gray-400 text-xs">{date?.slice(0, 10)}</p>
           </div>
         </div>
       ) : (
         ''
       )}
-      <p className="mt-4 font-semibold text-purple-200 text-sm">Share this post on:</p>
+      <p className="mt-4 font-semibold text-gray-200 text-sm">Share this post on:</p>
       <ShareButtons
         url={url}
         title={title}
