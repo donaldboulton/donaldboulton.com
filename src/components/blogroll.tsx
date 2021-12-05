@@ -29,7 +29,7 @@ const BlogRoll = ({ tag }: BlogRollProps) => {
     <div className="mt-6 flex flex-col items-center">
       {posts.length > POSTS_PER_PAGE ? (
         <ReactPaginate
-          previousLinkClassName="relative inline-flex items-center px-2 py-2 rounded-l-md border border-rose-200 bg-white text-sm font-medium"
+          previousLinkClassName="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-800 text-sm font-medium"
           previousLabel={
             <>
               <span className="sr-only">Previous</span>
@@ -83,12 +83,12 @@ const BlogRoll = ({ tag }: BlogRollProps) => {
       <div className="space-y-12 lg:space-y-0 flex flex-wrap mb-24">
         {posts.slice(offset, offset + POSTS_PER_PAGE).map(post => (
           <section className="p-4 md:w-1/2 lg:w-1/3">
-            <div className="h-full border-1 border-gray-200 bg-white rounded-lg shadow-xl overflow-hidden p-2">
+            <div className="h-full border-1 border-gray-800 light:border-gray-300 bg-gray-700 light:bg-offwhite text-white light:text-black rounded-lg shadow-xl overflow-hidden p-2">
               <Link to={`/${post.slug}`}>
                 <Img
                   image={post.frontmatter.image}
                   alt={post.frontmatter.title + ' featured image'}
-                  className="relative w-full h-48 bg-white rounded-lg overflow-hidden group-hover:opacity-75 aspect-w-3 aspect-h-2 sm:h-40"
+                  className="relative w-full h-48 rounded-lg overflow-hidden group-hover:opacity-75 aspect-w-3 aspect-h-2 sm:h-40"
                   imgClassName="w-full h-full object-center object-cover"
                 />
                 <p className="sr-only">{post.frontmatter.title}</p>
