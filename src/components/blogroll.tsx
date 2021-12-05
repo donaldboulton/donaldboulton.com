@@ -29,7 +29,7 @@ const BlogRoll = ({ tag }: BlogRollProps) => {
     <div className="mt-6 flex flex-col items-center">
       {posts.length > POSTS_PER_PAGE ? (
         <ReactPaginate
-          previousLinkClassName="relative inline-flex items-center px-2 py-2 rounded-l-md border border-rose-200 bg-white text-sm font-medium text-gray-900 hover:bg-rose-200"
+          previousLinkClassName="relative inline-flex items-center px-2 py-2 rounded-l-md border border-rose-200 bg-white text-sm font-medium"
           previousLabel={
             <>
               <span className="sr-only">Previous</span>

@@ -9,7 +9,7 @@ import LatestArticles from '../components/latestarticles'
 import CTA from '../components/cta'
 import Footer from '@/components/footer'
 
-import OGImage from '@/images/undraw/undraw_design_inspiration_fmjm.png'
+import OGImage from '@/images/undraw/undraw_Programming_re_kg9v.png'
 
 export default function Home() {
   const ogimage = {
@@ -23,7 +23,7 @@ export default function Home() {
       <SEO
         type="homepage"
         title="Home"
-        description="A Gatsby v4 starter for corporate/marketing/blog websites."
+        description="PubliusLogic topics on Law Congress Programing and Human Anything."
         image={ogimage}
       />
       <Header />
@@ -32,7 +32,7 @@ export default function Home() {
       <FindOutMore />
       <LatestArticles />
       <CTA />
-      <div className="p-24 md:p-12 bg-white" />
+      <div className="p-24 md:p-1" />
       <Footer />
     </div>
   )

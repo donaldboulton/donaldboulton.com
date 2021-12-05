@@ -23,8 +23,9 @@
     "url": "git+https://github.com/hellotham/hello-gatsby-starter.git"
   },
   "dependencies": {
-    "@headlessui/react": "^1.4.1",
-    "@heroicons/react": "^1.0.4",
+    "@gatsby-contrib/gatsby-plugin-elasticlunr-search": "^3.0.2",
+    "@headlessui/react": "^1.4.2",
+    "@heroicons/react": "^1.0.5",
     "@mapbox/rehype-prism": "^0.8.0",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
@@ -32,7 +33,7 @@
     "@sendgrid/mail": "^7.6.0",
     "@svgr/webpack": "^6.1.0",
     "@tailwindcss/aspect-ratio": "^0.3.0",
-    "@tailwindcss/forms": "^0.3.3",
+    "@tailwindcss/forms": "^0.3.4",
     "@tailwindcss/typography": "^0.4.1",
     "gatsby": "^4.3.0",
     "gatsby-plugin-feed-mdx": "^1.1.0",
@@ -56,6 +57,7 @@
     "hero-patterns": "^2.1.0",
     "leaflet": "^1.7.1",
     "react": "^17.0.2",
+    "react-cookie-consent": "^6.4.1",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
     "react-hook-form": "^7.20.5",

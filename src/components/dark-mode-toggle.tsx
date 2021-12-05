@@ -29,4 +29,5 @@ const DarkModeToggle: React.FC = () => {
     </div>
   );
 };
+
 export default DarkModeToggle

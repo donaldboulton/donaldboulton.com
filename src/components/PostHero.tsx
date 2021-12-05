@@ -25,26 +25,26 @@ const PostHero = ({ url, title, description, author, date, image, tags }: PostHe
     />
     <div className="p-4 absolute bottom-0 left-0 z-20">
       {tags ? <Tags tags={tags} /> : ''}
-      <h2 className="text-4xl font-bold text-white light:text-black leading-tight">{title}</h2>
-      <h2 className="text-xl font-medium italic text-primary-light">{description}</h2>
+      <h2 className="text-4xl font-bold text-gray-300 leading-tight">{title}</h2>
+      <h2 className="text-xl font-medium italic text-gray-300">{description}</h2>
       {author ? (
         <div className="flex mt-3">
           <StaticImage
-            src="../images/gatsby/Gatsby_Monogram.png"
+            src="../images/gatsby/publiuslogic-monogram.png"
             alt="Author profile"
             width={40}
             height={40}
             className="h-10 w-10 rounded-full mr-2 object-cover"
           />
           <div>
-            <p className="font-semibold text-gray-200 text-sm">{author}</p>
-            <p className="font-semibold text-gray-400 text-xs">{date?.slice(0, 10)}</p>
+            <p className="font-semibold text-gray-300 text-sm">{author}</p>
+            <p className="font-semibold text-gray-300 text-xs">{date?.slice(0, 10)}</p>
           </div>
         </div>
       ) : (
         ''
       )}
-      <p className="mt-4 font-semibold text-gray-200 text-sm">Share this post on:</p>
+      <p className="mt-4 font-semibold text-gray-300 text-sm">Share this post on:</p>
       <ShareButtons
         url={url}
         title={title}

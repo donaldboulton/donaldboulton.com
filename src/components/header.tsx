@@ -4,8 +4,8 @@ import DarkModeToggle from './dark-mode-toggle'
 import { Disclosure } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
-import Logo from '@/svg/gatsby/Gatsby_Monogram.svg'
-import PrimaryLogo from '@/svg/gatsby/Gatsby_Logo.svg'
+import Logo from '../images/gatsby/publiuslogic-monogram.png'
+import PrimaryLogo from '../images/gatsby//publiuslogic_logo.png'
 
 const navigation = [
   { name: 'Home', href: '/', current: false },

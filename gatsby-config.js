@@ -218,6 +218,31 @@ module.exports = {
       },
     },
     {
+      resolve: `@gatsby-contrib/gatsby-plugin-elasticlunr-search`,
+      options: {
+        // Fields to index
+        fields: [`title`, `description`, `content`, `path`, `date`],
+        // How to resolve each field`s value for a supported node type
+        resolvers: {
+          BlogPost : {
+            title         : node => node.title,
+            description   : node => node.description,
+            content       : node => node.rawMarkdownBody,
+            slug          : node => node.slug,
+            date          : node => node.date,
+            image : (node, getNode) => getNode(node.image___NODE)
+          },
+          Mdx: {
+            title: node => node.frontmatter.title,
+            description: node => node.frontmatter.description,
+            content: node => node.rawMarkdownBody,
+            slug: node => node.slug,
+            date: node => node.frontmatter.date
+          },
+        },
+      },
+    },
+    {
       resolve: `gatsby-plugin-gdpr-cookies`,
       options: {
         googleAnalytics: {

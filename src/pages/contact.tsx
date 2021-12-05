@@ -22,8 +22,8 @@ import Image from '@/svg/undraw/undraw_contact_us_-15-o2.svg'
 import OGImage from '@/images/undraw/undraw_contact_us_15o2.png'
 
 export default function ContactUs() {
-  // Default coordinates are that of Sydney, NSW, Australia
-  const position: [number, number] = [-33.86785, 151.20732]
+  // Default coordinates are that of OKC, Oklahoma, USA
+  const position: [number, number] = [35.592738, -97.439474]
 
   const [open, setOpen] = useState(false)
   const ogimage = {
@@ -84,15 +84,15 @@ export default function ContactUs() {
           </header>
         </article>
 
-        <Map lat={-33.86785} lng={151.20732} />
+        <Map lat={35.592738} lng={-97.439474} />
 
-        <div className="mt-10 sm:mt-0 p-8 bg-gray-100">
+        <div className="mt-10 sm:mt-0 p-8 bg-primary-dark light:bg-offwhite text-white light:text-black">
           <div className="lg:grid lg:grid-cols-3 lg:gap-6">
             <div className="lg:col-span-1">
               <div className="px-4 sm:px-0">
                 {contactMethods.map(method =>
                   method.link ? (
-                    <p key={method.name} className="mt-2 flex items-center text-sm text-gray-500">
+                    <p key={method.name} className="mt-2 flex items-center text-sm bg-primary-dark light:bg-offwhite text-white light:text-black">
                       <method.image className=" h-5 w-5" />
                       <span>&nbsp;{method.name}:&nbsp;</span>
                       <a href={method.link} className="text-gray-600 hover:text-rose-600">
@@ -228,7 +228,7 @@ export default function ContactUs() {
               <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
                 <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                   <div className="sm:flex sm:items-start">
-                    <div className="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
+                    <div className="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-gray-100 sm:mx-0 sm:h-10 sm:w-10">
                       <CheckCircleIcon className="h-6 w-6 text-green-600" aria-hidden="true" />
                     </div>
                     <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">

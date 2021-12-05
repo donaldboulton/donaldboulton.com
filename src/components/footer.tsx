@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 
 import SiteMetadata from '@/utils/sitemetadata'
 import A from '@/components/a'
-import Logo from '@/svg/gatsby/Gatsby_Logo.svg'
+import Logo from '../images/gatsby/publiuslogic-monogram.png'
 
 import LinkedIn from '@/svg/icons/linkedin.inline.svg'
 import Facebook from '@/svg/icons/facebook.inline.svg'
@@ -32,7 +32,7 @@ export default function Footer() {
         </Link>
         <p className="text-sm text-gray-200 md:ml-4 md:pl-4 md:border-l-2 md:border-gray-500 md:py-2 md:mt-0 mt-4">
           © {new Date().getFullYear()} 0BSD licence
-          <A href="https://hellotham.com" className="ml-1" external>
+          <A href="https://publiuslogic.com" className="ml-1" external>
             PubliusLogic.com
           </A>
         </p>

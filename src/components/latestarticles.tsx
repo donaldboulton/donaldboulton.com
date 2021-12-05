@@ -12,20 +12,20 @@ export default function LatestArticles() {
   const otherPosts = posts.slice(1, 5)
 
   return (
-    <div className="bg-white">
+    <div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto py-8 sm:py-12 lg:py-16 lg:max-w-none">
           <div className="flex flex-row items-center">
-            <h2 className="text-2xl md:text-4xl font-extrabold text-gray-800">Our Latest Articles</h2>
+            <h2 className="text-2xl md:text-4xl font-extrabold">Our Latest Articles</h2>
             <Link
               to={'/blog'}
-              className="inline-block px-2 py-2 md:px-6 md:py-3 mt-2 ml-4 rounded-md bg-gray-600 hover:bg-rose-600 text-white light:text-black font-bold text-base md:text-lg"
+              className="inline-block px-2 py-2 md:px-6 md:py-3 mt-2 ml-4 rounded-md bg-red-400 hover:bg-red-500 text-white font-bold text-base md:text-lg"
             >
               All Articles
             </Link>
             <Link
               to={'/tags'}
-              className="inline-block px-2 py-2 md:px-6 md:py-3 mt-2 ml-4 rounded-md bg-gray-600 hover:bg-rose-600 text-white light:text-black font-bold text-base md:text-lg"
+              className="inline-block px-2 py-2 md:px-6 md:py-3 mt-2 ml-4 rounded-md bg-red-600 hover:bg-red-700 text-white font-bold text-base md:text-lg"
             >
               Tags
             </Link>
@@ -45,14 +45,14 @@ export default function LatestArticles() {
                 <Tags tags={post.frontmatter.tags} />
               </div>
               <Link to={`/${post.slug}`}>
-                <h1 className="text-gray-600 hover:text-rose-600 text-4xl font-bold mt-2 mb-2 leading-tight">
+                <h1 className="text-4xl font-bold mt-2 mb-2 leading-tight">
                   {post.frontmatter.title}
                 </h1>
               </Link>
-              <p className="text-gray-600 mb-4">{post.frontmatter.description}</p>
+              <p>{post.frontmatter.description}</p>
               <Link
                 to={`/${post.slug}`}
-                className="inline-block px-6 py-3 mt-2 rounded-md bg-gray-600 hover:bg-rose-600  light:text-black"
+                className="inline-block px-6 py-3 mt-2 rounded-md"
               >
                 Read more
                 <span className="sr-only">{post.frontmatter.title}</span>
@@ -71,7 +71,7 @@ export default function LatestArticles() {
                     <div className="bg-white rounded px-4 md:col-span-2">
                       <Tags tags={post.frontmatter.tags} />
                       <div className="md:mt-0 text-gray-800 font-semibold text-xl mb-2">{post.frontmatter.title}</div>
-                      <p className="block md:hidden p-2 pl-0 pt-1 text-sm text-gray-600">
+                      <p className="block md:hidden p-2 pl-0 pt-1 text-sm">
                         {post.frontmatter.description}
                       </p>
                     </div>
