@@ -67,9 +67,9 @@ const BlogRoll = ({ tag }: BlogRollProps) => {
               </svg>
             </>
           }
-          pageLinkClassName="relative inline-flex items-center px-4 py-2 border border-rose-200 bg-white text-sm font-medium text-gray-900 hover:bg-rose-200"
+          pageLinkClassName="relative inline-flex items-center px-4 py-2 border border-rose-200 bg-white text-sm font-medium"
           breakLabel={'...'}
-          breakLinkClassName="relative inline-flex items-center px-4 py-2 border border-rose-200 bg-gray-100 text-sm font-medium text-gray"
+          breakLinkClassName="relative inline-flex items-center px-4 py-2 border border-gray-200 text-sm font-medium"
           pageCount={Math.ceil(posts.length / POSTS_PER_PAGE)}
           marginPagesDisplayed={2}
           pageRangeDisplayed={3}
@@ -96,22 +96,22 @@ const BlogRoll = ({ tag }: BlogRollProps) => {
               <div className="p-6">
                 {post.frontmatter.tags ? <Tags tags={post.frontmatter.tags} /> : ''}
                 <Link to={`/${post.slug}`}>
-                  <h1 className="title-font text-xl font-bold text-gray-600 hover:text-rose-600 mt-2">
+                  <h1 className="title-font text-xl font-bold text-gray-300 hover:text-red-600 mt-2">
                     {post.frontmatter.title}
                   </h1>
                 </Link>
                 <div className="flex items-center flex-wrap ">
-                  <span className="text-gray-500 mr-3 inline-flex items-center leading-none text-xs pr-3 py-1 border-r-2 border-rose-200">
+                  <span className="text-gray-300 mr-3 inline-flex items-center leading-none text-xs pr-3 py-1 border-r-2 border-rose-200">
                     <CalendarIcon className="w-4 h-4 mr-1" />
                     {post.frontmatter.date}
                   </span>
-                  <span className="text-gray-500 inline-flex items-center leading-none text-xs">
+                  <span className="text-gray-300 inline-flex items-center leading-none text-xs">
                     <UserCircleIcon className="w-4 h-4 mr-1" />
                     {post.frontmatter.author}
                   </span>
                 </div>
 
-                <p className="mt-3 italic text-sm text-gray-600">{post.frontmatter.description}</p>
+                <p className="mt-3 italic text-sm text-gray-300">{post.frontmatter.description}</p>
               </div>
             </div>
           </section>

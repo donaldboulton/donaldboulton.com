@@ -1,23 +1,23 @@
 module.exports = {
   siteMetadata: {
-    title: 'Hello Gatsby Starter',
+    title: 'PubliusLogic',
     author: {
-      name: 'Hello Tham',
-      url: 'https://hellotham.com',
+      name: 'Donald Boulton',
+      url: 'https://publiuslogic.com',
       summary:
         'Hello Tham is a boutique management consulting firm. We specialise in Business and IT strategies, operating models, strategic roadmaps, enterprise architecture, analytics and business process design.',
     },
     description: 'A Gatsby v4 starter for corporate/marketing/blog websites.',
     siteUrl: 'https://hello-gatsby-starter.hellotham.com',
-    location: 'Rivendell, Middle Earth',
+    location: 'OKC, Middle Earth',
     social: {
-      email: 'mailto:info@contact.me',
-      phone: 'tel:+61234567890',
-      facebook: 'https://www.facebook.com',
-      instagram: 'https://www.instagram.com',
-      twitter: 'https://twitter.com',
-      linkedin: 'https://www.linkedin.com',
-      github: 'https://github.com',
+      email: 'mailto:donaldboulton@gmail.com',
+      phone: 'tel:+4056231494',
+      facebook: 'https://www.facebook.com/donboulton',
+      instagram: 'https://www.instagram.com/boulton3662',
+      twitter: 'https://twitter.com/donboulton',
+      linkedin: 'https://www.linkedin.com/donboulton',
+      github: 'https://github.com/donaldboulton/',
     },
   },
   plugins: [
@@ -76,13 +76,13 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Hello Gatsby Starter',
-        short_name: 'hello-gatsby-starter',
+        name: 'PubliusLogic',
+        short_name: 'PubliusLogic',
         start_url: '/',
         background_color: '#ffffff',
         theme_color: '#660099',
         display: 'minimal-ui',
-        icon: 'src/images/gatsby/Gatsby_Monogram.png', // This path is relative to the root of the site.
+        icon: 'src/images/gatsby/publiuslogic-logo.png', // This path is relative to the root of the site.
       },
     },
     'gatsby-plugin-robots-txt',

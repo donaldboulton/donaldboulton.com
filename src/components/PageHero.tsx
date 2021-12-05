@@ -6,7 +6,7 @@ interface PageHeroProps {
   image?: string
 }
 
-import defaultImage from '@/svg/undraw/undraw_Programming_re_kg9v.svg'
+import defaultImage from '@/svg/undraw/undraw_programming_re_kg9v.svg'
 
 const PageHero = ({ title, description, image }: PageHeroProps) => (
   <div className="mb-4 md:mb-0 w-full max-w-screen-xl mx-auto relative h-96 text-white">

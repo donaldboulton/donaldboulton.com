@@ -5,7 +5,7 @@ import { Disclosure } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
 import Logo from '../images/gatsby/publiuslogic-monogram.png'
-import PrimaryLogo from '../images/gatsby//publiuslogic_logo.png'
+import PrimaryLogo from '../images/gatsby/publiuslogic-logo.png'
 
 const navigation = [
   { name: 'Home', href: '/', current: false },
